@@ -2,8 +2,22 @@
 with open("./1/input.txt") as f:
     lines = f.readlines()
 
-
 def how_many_increases(input, window_size=1):
+    """
+    Counts the number of increases from one window from the previous.
+
+    This function compates the sum of values in a sliding window to the sum of
+    values in the window in its previous postion.
+    
+    Arguments
+    ---------
+    input - a list of integer strings
+    window_size - the size of overlapping windows to compare
+
+    Returns
+    -------
+    The number of increases.
+    """
     
     heights = [int(x) for x in input]
 
@@ -15,10 +29,6 @@ def how_many_increases(input, window_size=1):
             count += 1
     
     return count
-
-
-
-
 
 rslt = how_many_increases(lines)
 
